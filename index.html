@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Accessible Enterprise Dashboard">
+
+    <title>Enterprise Dashboard</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="logo">
+            <a href="index.html">Enterprise Dashboard</a>
+        </div>
+
+        <button
+            class="menu-btn"
+            type="button"
+            aria-label="Open navigation menu">
+            ☰
+        </button>
+
+        <!-- NAVIGATION -->
+        <nav id="main-navigation" aria-label="Main navigation">
+
+            <a href="index.html" aria-current="page">
+                Home
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PAGE LAYOUT -->
+    <div class="layout">
+
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" aria-label="Sidebar navigation">
+
+            <h2>Menu</h2>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="#reports">Reports</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+
+            <!-- WELCOME SECTION -->
+            <section class="hero" aria-labelledby="welcome-title">
+
+                <h1 id="welcome-title">
+                    Welcome to Enterprise Dashboard
+                </h1>
+
+                <p>
+                    Manage your business information, reports and
+                    activities from one accessible dashboard.
+                </p>
+
+                <a class="button" href="dashboard.html">
+                    Open Dashboard
+                </a>
+
+            </section>
+
+
+            <!-- BUSINESS OVERVIEW -->
+            <section id="reports" aria-labelledby="reports-title">
+
+                <h2 id="reports-title">
+                    Business Overview
+                </h2>
+
+
+                <div class="cards">
+
+
+                    <!-- CARD 1 -->
+                    <article class="card">
+
+                        <h3>
+                            Total Sales
+                        </h3>
+
+                        <p class="number">
+                            ₹82,500
+                        </p>
+
+                        <p>
+                            Sales this month
+                        </p>
+
+                    </article>
+
+
+                    <!-- CARD 2 -->
+                    <article class="card">
+
+                        <h3>
+                            Customers
+                        </h3>
+
+                        <p class="number">
+                            1,250
+                        </p>
+
+                        <p>
+                            Active customers
+                        </p>
+
+                    </article>
+
+
+                    <!-- CARD 3 -->
+                    <article class="card">
+
+                        <h3>
+                            Orders
+                        </h3>
+
+                        <p class="number">
+                            320
+                        </p>
+
+                        <p>
+                            Orders completed
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- RECENT ACTIVITY -->
+            <section aria-labelledby="activity-title">
+
+                <h2 id="activity-title">
+                    Recent Activity
+                </h2>
+
+
+                <article class="content-box">
+
+                    <h3>
+                        Monthly Report
+                    </h3>
+
+                    <p>
+                        The monthly business report has been
+                        successfully generated and is ready for review.
+                    </p>
+
+
+                    <button
+                        class="button"
+                        type="button"
+                        data-open-modal>
+
+                        View Details
+
+                    </button>
+
+                </article>
+
+            </section>
+
+
+            <!-- CONTACT FORM -->
+            <section id="contact" aria-labelledby="contact-title">
+
+                <h2 id="contact-title">
+                    Contact Form
+                </h2>
+
+
+                <form id="contactForm">
+
+                    <fieldset>
+
+                        <legend>
+                            Contact Information
+                        </legend>
+
+
+                        <!-- NAME -->
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                aria-label="Full Name"
+                                placeholder="Enter your name"
+                                minlength="2"
+                                required>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                aria-label="Email Address"
+                                placeholder="example@email.com"
+                                required>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                aria-label="Message"
+                                placeholder="Enter your message"
+                                minlength="10"
+                                rows="5"
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            class="button"
+                            type="submit">
+
+                            Submit
+
+                        </button>
+
+                    </fieldset>
+
+                </form>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 Enterprise Dashboard.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- MODAL -->
+    <dialog
+        id="detailsModal"
+        aria-labelledby="modal-title">
+
+        <div class="modal-content">
+
+            <h2 id="modal-title">
+                Report Details
+            </h2>
+
+            <p>
+                This report contains the latest sales,
+                customer and order information for the
+                current month.
+            </p>
+
+            <button
+                class="button"
+                type="button"
+                data-close-modal>
+
+                Close
+
+            </button>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

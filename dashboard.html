@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enterprise Dashboard Data">
+    <title>Dashboard - Enterprise Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="logo">
+        <a href="index.html">Enterprise Dashboard</a>
+    </div>
+
+    <button class="menu-btn"
+            type="button"
+            aria-label="Open navigation menu"
+            onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <nav id="main-navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html" aria-current="page">Dashboard</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<div class="layout">
+
+    <aside class="sidebar" aria-label="Dashboard navigation">
+
+        <h2>Dashboard</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Overview</a></li>
+            <li><a href="#sales">Sales</a></li>
+            <li><a href="#employees">Employees</a></li>
+        </ul>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <section aria-labelledby="dashboard-title">
+
+            <h1 id="dashboard-title">Dashboard Overview</h1>
+
+            <p>
+                This page provides business performance information.
+            </p>
+
+        </section>
+
+
+        <section id="sales" aria-labelledby="sales-title">
+
+            <h2 id="sales-title">Sales Data</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <caption>
+                        Monthly Sales Report
+                    </caption>
+
+                    <thead>
+
+                        <tr>
+                            <th scope="col">Month</th>
+                            <th scope="col">Sales</th>
+                            <th scope="col">Orders</th>
+                            <th scope="col">Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <th scope="row">January</th>
+                            <td>₹45,000</td>
+                            <td>120</td>
+                            <td>Completed</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">February</th>
+                            <td>₹52,000</td>
+                            <td>145</td>
+                            <td>Completed</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">March</th>
+                            <td>₹67,500</td>
+                            <td>180</td>
+                            <td>Completed</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">April</th>
+                            <td>₹72,000</td>
+                            <td>210</td>
+                            <td>Completed</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <section id="employees" aria-labelledby="employee-title">
+
+            <h2 id="employee-title">Employee Information</h2>
+
+            <article class="content-box">
+
+                <h3>Team Performance</h3>
+
+                <p>
+                    The current team is performing according to the
+                    monthly business targets.
+                </p>
+
+                <ul>
+                    <li>Sales Team - 95% target achieved</li>
+                    <li>Support Team - 92% target achieved</li>
+                    <li>Development Team - 98% target achieved</li>
+                </ul>
+
+            </article>
+
+        </section>
+
+
+        <section aria-labelledby="settings-title">
+
+            <h2 id="settings-title">Dashboard Settings</h2>
+
+            <form>
+
+                <fieldset>
+
+                    <legend>Notification Settings</legend>
+
+                    <div class="form-group">
+
+                        <label for="notification">
+                            Notification Preference
+                        </label>
+
+                        <select
+                            id="notification"
+                            name="notification"
+                            aria-label="Notification Preference"
+                            required>
+
+                            <option value="">
+                                Select an option
+                            </option>
+
+                            <option value="email">
+                                Email
+                            </option>
+
+                            <option value="sms">
+                                SMS
+                            </option>
+
+                            <option value="both">
+                                Email and SMS
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="frequency">
+                            Report Frequency
+                        </label>
+
+                        <input
+                            type="text"
+                            id="frequency"
+                            name="frequency"
+                            aria-label="Report Frequency"
+                            value="Monthly"
+                            required>
+
+                    </div>
+
+
+                    <button class="button" type="submit">
+                        Save Settings
+                    </button>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<footer class="site-footer">
+
+    <p>
+        &copy; 2026 Enterprise Dashboard.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

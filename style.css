@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f6f8;
+    color: #222;
+}
+
+
+/* Header */
+
+.site-header {
+    background: #172033;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* Layout */
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 130px);
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 230px;
+    background: white;
+    padding: 25px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: #172033;
+    text-decoration: none;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+    text-decoration: underline;
+}
+
+
+/* Main */
+
+.main-content {
+    flex: 1;
+    padding: 35px;
+    max-width: 1200px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.hero {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.hero h1 {
+    margin-top: 0;
+}
+
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.number {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Content box */
+
+.content-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    background: #172033;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover,
+.button:focus {
+    background: #303d58;
+}
+
+
+/* Forms */
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+fieldset {
+    border: 1px solid #bbb;
+    padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 11px;
+    font-size: 16px;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #8ab4f8;
+}
+
+
+/* Table */
+
+.table-container {
+    overflow-x: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+th,
+td {
+    border: 1px solid #aaa;
+    padding: 12px;
+    text-align: left;
+}
+
+thead {
+    background: #e9edf2;
+}
+
+
+/* Modal */
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    padding: 30px;
+}
+
+
+/* Footer */
+
+.site-footer {
+    background: #172033;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 7px 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    table {
+        min-width: 600px;
+    }
+}
